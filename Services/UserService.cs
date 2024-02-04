@@ -40,7 +40,7 @@ namespace OOP.Services
             var result = _userProvider.GetById(userId);
             if (result == null)
             {
-                _logger.Error($"{nameof(User)} with id = {userId} is not found through EF.");
+                _logger.Error($"{nameof(User)} with id = {userId} is not found through EF");
                 return null;
             }
             _logger.Info($"Get {nameof(User)} by id = {userId} through EF.");
@@ -53,7 +53,7 @@ namespace OOP.Services
             var result = _userProvider.Add(users);
             if (result == users.Count())
             {
-                _logger.Info($"Added {result} through EF.");
+                _logger.Info($"аdded {result} through EF");
             }
             else
             {
@@ -68,11 +68,11 @@ namespace OOP.Services
             var result = _userProviderDapper.Add(users);
             if (result == 1)
             {
-                _logger.Info($"Added {result} through dapper.");
+                _logger.Info($"Added {result} through dapper");
             }
             else
             {
-                _logger.Error($"Didn't added {result} {nameof(User)} through dapper.");
+                _logger.Error($"didn't added {result} {nameof(User)} through dapper.");
             }
 
             return result;
