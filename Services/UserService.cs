@@ -68,7 +68,7 @@ namespace OOP.Services
             var result = _userProviderDapper.Add(users);
             if (result == 1)
             {
-                _logger.Info($"Added {result} through dapper");
+                _logger.Info($"added {result} through dapper");
             }
             else
             {
@@ -98,7 +98,7 @@ namespace OOP.Services
             var result =  _userProviderDapper.Update(users);
             if (result == 0)
             {
-                _logger.Info($"Updated {result} through dapper.");
+                _logger.Info($"updated {result} through dapper");
             }
             else
             {
@@ -114,7 +114,7 @@ namespace OOP.Services
             var result = _userProvider.Remove(user);
             if (result == 0)
             {
-                _logger.Info($"Deleted {result} through EF.");
+                _logger.Info($"Deleted {result} through EF");
             }
             else
             {
@@ -129,7 +129,7 @@ namespace OOP.Services
             var result = _userProviderDapper.Remove(userId);
             if (result == 0)
             {
-                _logger.Info($"Deleted {result} through dapper.");
+                _logger.Info($"deleted {result} through dapper.");
             }
             else
             {
